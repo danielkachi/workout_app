@@ -1,10 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
 import 'package:workout_app/Screens/activity_screen.dart';
 import 'package:workout_app/Screens/workout_screen.dart';
-import 'package:workout_app/main.dart';
 
 class StatCreate extends StatelessWidget {
   const StatCreate({Key? key}) : super(key: key);
@@ -18,24 +14,24 @@ class StatCreate extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(
               left: 30,
-              right: 30,
+              right: 20,
               top: 50,
             ),
             child: Column(
               children: [
-                TextRow(
+                const TextRow(
                   text1: 'Statistic',
-                  text2: '    Monthly',
+                  text2: 'Monthly',
                   icon: Icons.arrow_drop_down_rounded,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.blueGrey[900],
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
                           'https://c4.wallpaperflare.com/wallpaper/590/199/588/audio-spectrum-minimalism-digital-art-music-wallpaper-preview.jpg'),
@@ -63,15 +59,15 @@ class StatCreate extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                TextRow(
+                const TextRow(
                   text1: 'Overview',
                   text2: 'See more',
                   icon: Icons.arrow_right_rounded,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -79,15 +75,15 @@ class StatCreate extends StatelessWidget {
                     Expanded(
                       child: Container(
                         decoration: BoxDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage(
                                 'https://fastcode.space/wp-content/uploads/2019/11/Wavy-Dark-Line-Background.jpg'),
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(15),
+                        child: const Padding(
+                          padding: EdgeInsets.all(15),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.end,
@@ -112,21 +108,21 @@ class StatCreate extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Expanded(
                       child: Container(
                           decoration: BoxDecoration(
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               fit: BoxFit.cover,
                               image: NetworkImage(
                                   'https://fastcode.space/wp-content/uploads/2019/11/Wavy-Dark-Line-Background.jpg'),
                             ),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.end,
@@ -152,21 +148,21 @@ class StatCreate extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                TextRow(
+                const TextRow(
                   text1: 'Exercises',
-                  text2: '                ',
+                  text2: "",
                   icon: Icons.menu_rounded,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   children: [
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: NetworkImage(
@@ -175,9 +171,9 @@ class StatCreate extends StatelessWidget {
                       ),
                       height: 30,
                       width: 30,
-                      child: Text('  '),
+                      child: const Text('  '),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Text(
@@ -188,10 +184,8 @@ class StatCreate extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(
-                      width: 155,
-                    ),
-                    Text(
+                    const Spacer(),
+                    const Text(
                       '45 minutes',
                       style: TextStyle(
                           color: Colors.black,
@@ -200,13 +194,13 @@ class StatCreate extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
                   children: [
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: NetworkImage(
@@ -215,9 +209,8 @@ class StatCreate extends StatelessWidget {
                       ),
                       height: 30,
                       width: 30,
-                      child: Text('  '),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Text(
@@ -228,10 +221,8 @@ class StatCreate extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(
-                      width: 190,
-                    ),
-                    Text(
+                    const Spacer(),
+                    const Text(
                       '1 hour',
                       style: TextStyle(
                           color: Colors.black,
@@ -240,13 +231,13 @@ class StatCreate extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
                   children: [
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: NetworkImage(
@@ -255,9 +246,8 @@ class StatCreate extends StatelessWidget {
                       ),
                       height: 30,
                       width: 30,
-                      child: Text('  '),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Text(
@@ -268,9 +258,7 @@ class StatCreate extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(
-                      width: 25,
-                    ),
+                    const Spacer(),
                     const Text(
                       '10 minutes',
                       style: TextStyle(
@@ -306,7 +294,7 @@ class StatCreate extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => WorkOut(),
+                                  builder: (context) => const WorkOut(),
                                 ),
                               );
                             },
@@ -316,7 +304,7 @@ class StatCreate extends StatelessWidget {
                               size: 35,
                             ),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.insert_chart_rounded,
                             color: Colors.white,
                             size: 35,
@@ -340,7 +328,7 @@ class StatCreate extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => MyActivity(),
+                                  builder: (context) => const MyActivity(),
                                 ),
                               );
                             },
@@ -361,7 +349,7 @@ class StatCreate extends StatelessWidget {
                         top: -20,
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xffAECF18),
+                            color: const Color(0xffAECF18),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Padding(
@@ -385,12 +373,11 @@ class StatCreate extends StatelessWidget {
 }
 
 class TextRow extends StatelessWidget {
-  const TextRow(
-      {Key? key, required this.text1, required this.text2, required this.icon})
+  const TextRow({Key? key, required this.text1, this.text2, required this.icon})
       : super(key: key);
 
   final String text1;
-  final String text2;
+  final String? text2;
   final IconData icon;
 
   @override
@@ -399,17 +386,15 @@ class TextRow extends StatelessWidget {
       children: [
         Text(
           text1,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.black,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
-          width: 160,
-        ),
+        const Spacer(),
         Text(
-          text2,
+          text2!,
           style: TextStyle(
             color: Colors.grey[600],
             fontSize: 15,

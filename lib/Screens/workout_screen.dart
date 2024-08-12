@@ -16,60 +16,60 @@ class WorkOut extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey[900],
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.only(
               top: 50.0,
-              left: 25,
+              left: 16,
+              right: 8,
             ),
-            child: Row(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Row(
+                  children: [
+                    const Text(
+                      'Hi, User!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Icon(
+                      WaveIcon.hd_wave_icon,
+                      color: Colors.yellow[800],
+                      size: 30,
+                    ),
+                    const Spacer(),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeScreen()));
+                      },
+                      child: const Icon(
+                        Icons.cancel_rounded,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                    ),
+                  ],
+                ),
                 const Text(
-                  'Hi, User!',
+                  'Let us make your body stronger!',
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Icon(
-                  WaveIcon.hd_wave_icon,
-                  color: Colors.yellow[800],
-                  size: 30,
-                ),
-                SizedBox(
-                  width: 225,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
-                  },
-                  child: Icon(
-                    Icons.cancel_rounded,
-                    color: Colors.white,
-                    size: 30,
+                    color: Colors.white70,
+                    fontSize: 16,
                   ),
                 ),
               ],
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(
-              top: 10.0,
-              left: 2,
-              right: 120,
-            ),
-            child: Text(
-              'Let us make your body stronger!',
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 16,
-              ),
-            ),
-          ),
           const SizedBox(
-            height: 40,
+            height: 20,
           ),
           Expanded(
             child: Container(
@@ -97,7 +97,6 @@ class WorkOut extends StatelessWidget {
                       children: [
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
                               'Workout program',
@@ -107,40 +106,35 @@ class WorkOut extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                top: 6,
-                                left: 90,
-                              ),
-                              child: Text(
-                                'See more',
-                                style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                            const Spacer(),
+                            Text(
+                              'See more',
+                              style: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 5.5),
-                              child: Icon(
-                                Icons.play_arrow_rounded,
-                                color: Colors.grey[600],
-                                size: 20,
-                              ),
+                            const SizedBox(
+                              width: 4,
+                            ),
+                            Icon(
+                              Icons.play_arrow_rounded,
+                              color: Colors.grey[600],
+                              size: 20,
                             ),
                           ],
                         ),
                         const SizedBox(
                           height: 30,
                         ),
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Expanded(
                               child: Column(
-                                children: const [
+                                children: [
                                   CardBox(
                                     height: 220,
                                     image:
@@ -159,12 +153,12 @@ class WorkOut extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 15,
                             ),
                             Expanded(
                               child: Column(
-                                children: const [
+                                children: [
                                   CardBox(
                                     height: 150,
                                     image:
@@ -390,7 +384,7 @@ class CardBox extends StatelessWidget {
             Row(
               children: [
                 ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 90),
+                  constraints: const BoxConstraints(maxWidth: 80),
                   child: Text(
                     text,
                     style: const TextStyle(color: Colors.white),
